@@ -1,16 +1,27 @@
-# todoapp
+📝 Flutter Todo App
 
-A new Flutter project.
+A simple and clean Todo List app built using Flutter. This app lets you add new tasks, mark them as complete, and manage your day effectively — all with a sleek Material Design interface.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+📌 About
 
-A few resources to get you started if this is your first Flutter project:
+This app was built as part of my Flutter learning journey by following a YouTube tutorial. It helped me understand core concepts like:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Stateful Widgets
+- ListView.builder
+- Handling user input (`TextField`)
+- State management using `setState`
+- UI customization with `Container`, `Card`, and `InputDecoration`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🎥 Tutorial Credit
+
+This project is based on the YouTube tutorial:
+
+**[Flutter ToDo App Tutorial for Beginners - Apps From Scratch](https://www.youtube.com/watch?v=VfdTUKt21Ls)**
+
+> 📌 All credit goes to the original creator for the video guidance and project structure.
+
+---
