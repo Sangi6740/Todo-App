@@ -30,6 +30,12 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  void deleteTask(int index) {
+    setState(() {
+      todolist.removeAt(index);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,34 +53,41 @@ class _HomePageState extends State<HomePage> {
             taskName: todolist[index][0],
             taskcomp: todolist[index][1],
             onChanged: (value) => checkBoxChanged(index),
+            delete: (context) => deleteTask(index),
           );
         },
       ),
-      floatingActionButton: Row(
-        children: [
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: TextField(
-                controller: _newtask,
-                decoration: InputDecoration(
-                  hintText: 'Add your task',
-                  filled: true,
-                  fillColor: Colors.tealAccent.shade100,
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.black),
-                    borderRadius: BorderRadius.circular(15),
+      floatingActionButton: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 15),
+        child: Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: TextField(
+                  controller: _newtask,
+                  decoration: InputDecoration(
+                    hintText: 'Add your task',
+                    filled: true,
+                    fillColor: Colors.tealAccent.shade100,
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-          FloatingActionButton(onPressed: savednewtask, child: Icon(Icons.add)),
-        ],
+            FloatingActionButton(
+              onPressed: savednewtask,
+              child: Icon(Icons.add),
+            ),
+          ],
+        ),
       ),
     );
   }
